@@ -4,14 +4,18 @@ Repositório contendo a Prova Pratica de S206
 ## Para rodar os testes de UI, seguir as etapas:
 
 1) Baixar as dependencias do projeto (caso já tenha baixado o código do git)
-'''
+```
 npm install
-'''
+```
 2) Abrir cypress pela linha de comando:
+```
 ./node_modules/.bin/cypress open
+```
 
-3) Rodar specs por linha de comando:
+4) Rodar specs por linha de comando:
+```
 ./node_modules/.bin/cypress run --spec 'cypress/e2e/**/'
+```
 
 4)Para gerar um report HTML, siga os 4 passos abaixo:
 
