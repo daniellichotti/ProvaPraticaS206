@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"prova_pratica\/poke_api\/poke[1:6]","start":1687717645715,"end":1687717646979,"title":"prova_pratica\/poke_api\/poke[1:6] 15:27:25.715-15:27:26.979 1 testando o retorno do rattata."},{"id":2,"group":1,"content":"prova_pratica\/poke_api\/poke[2:14]","start":1687717647003,"end":1687717647433,"title":"prova_pratica\/poke_api\/poke[2:14] 15:27:27.003-15:27:27.433 2 testando o retorno do pidgeotto."},{"id":3,"group":1,"content":"prova_pratica\/poke_api\/poke[3:22]","start":1687717647446,"end":1687717647865,"title":"prova_pratica\/poke_api\/poke[3:22] 15:27:27.446-15:27:27.865 3 testando o retorno do weedle."},{"id":4,"group":1,"content":"prova_pratica\/poke_api\/poke[4:30]","start":1687717647876,"end":1687717648288,"title":"prova_pratica\/poke_api\/poke[4:30] 15:27:27.876-15:27:28.288 4 Teste Negativo - Testando retorno pokemon\/ com informações inválidas."},{"id":5,"group":1,"content":"prova_pratica\/poke_api\/poke[5:36]","start":1687717648297,"end":1687717648967,"title":"prova_pratica\/poke_api\/poke[5:36] 15:27:28.297-15:27:28.967 5 Testando se retorna status 404 quando tentamos dar um delete."},{"id":6,"group":1,"content":"prova_pratica\/poke_api\/poke[6:42]","start":1687717648977,"end":1687717649655,"title":"prova_pratica\/poke_api\/poke[6:42] 15:27:28.977-15:27:29.655 6 Testando se retorna status 404 quando tentamos dar um post."},{"id":7,"group":1,"content":"prova_pratica\/poke_api\/poke[7:48]","start":1687717649663,"end":1687717650414,"title":"prova_pratica\/poke_api\/poke[7:48] 15:27:29.663-15:27:30.414 7 Testando se retorna status 404 quando tentamos dar um put."}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
