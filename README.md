@@ -42,21 +42,26 @@ npm install
 ## Para rodar os testes de API, seguir as etapas:
 
 Criar estrutura inicial Karate:
-
+```
 mvn archetype:generate \
 -DarchetypeGroupId=com.intuit.karate \
 -DarchetypeArtifactId=karate-archetype \
 -DarchetypeVersion=1.0.1 \
 -DgroupId=aula.inatel \
 -DartifactId=aula_inatel
+```
 
 Executar um teste a partir do Runner ou suíte:
+```
 mvn test –Dtest=StarWarsRunner
+```
 
 Executar testes separados por tags:
+```
 mvn test -Dkarate.options="--tags @tag”
+```
 
 Para ignorar alguma tag:
-mvn test -Dkarate.options="--tags ~@tag" 
-
-Todas as tags podem ser configuradas na classe da suíte de testes. (InatelTest.Java)
+```
+mvn test -Dkarate.options="--tags ~@tag"
+```
